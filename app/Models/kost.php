@@ -9,4 +9,11 @@ class kost extends Model
 {
     /** @use HasFactory<\Database\Factories\KostFactory> */
     use HasFactory;
+    protected $fillable = [
+    'nama_kost',
+    'alamat',
+    'harga_per_bulan',
+    'fasilitas',
+    'kontak'
+];
 }

@@ -8,10 +8,21 @@ class KostController extends Controller
 {
     public function index()
     {
-    return view('kosts.index', [
+    return view('kost.index', [
     'title' => 'Data Kost',
     'kosts' => Kost::latest()->get()
-]);
-   
+        ]);
+    }
+
+    public function create()
+    {
+    return view('kost.create', [
+        'title' => 'Tambah Data'
+    ]);
+    }
+
+    public function store(Request $request)
+    {
+        
     }
 }
